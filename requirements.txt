@@ -1,0 +1,26 @@
+# Core ML and Audio Processing
+librosa==0.10.1
+tensorflow
+numpy
+scipy
+scikit-learn
+
+# Web Framework
+flask==2.3.2
+flask-cors==4.0.0
+werkzeug==2.3.6
+
+# Data Processing
+pandas
+matplotlib
+seaborn
+
+# Audio Processing
+soundfile
+pydub
+
+# Web Interface
+jinja2
+
+# Development
+python-dotenv

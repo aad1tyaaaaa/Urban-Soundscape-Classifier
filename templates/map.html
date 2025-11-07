@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noise Pollution Map - Urban Soundscape Classifier</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/map.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Interactive Noise Pollution Map</h1>
+        <p>Visualize urban soundscapes and noise hotspots</p>
+    </header>
+
+    <main>
+        <div id="map-container">
+            <div id="map"></div>
+            <div id="legend">
+                <h3>Sound Types</h3>
+                <div class="legend-item">
+                    <span class="legend-color" style="background-color: #ff4444;"></span>
+                    <span>Emergency (Sirens)</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background-color: #ff8800;"></span>
+                    <span>Construction</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background-color: #ffaa00;"></span>
+                    <span>Traffic</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background-color: #44ff44;"></span>
+                    <span>Street Music</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background-color: #4444ff;"></span>
+                    <span>Other</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="controls">
+            <button onclick="loadNoiseData()">Refresh Data</button>
+            <button onclick="toggleHeatmap()">Toggle Heatmap</button>
+            <button onclick="centerMap()">Center Map</button>
+        </div>
+
+        <div id="info-panel">
+            <h3>Selected Location</h3>
+            <div id="location-info">
+                <p>Click on a marker to see details</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="{{ url_for('static', filename='js/map.js') }}"></script>
+</body>
+</html>

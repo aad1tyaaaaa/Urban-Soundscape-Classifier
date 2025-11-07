@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Soundscape Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <h1>Urban Soundscape Classifier</h1>
+        <p>Upload audio files to classify urban sounds and visualize noise pollution</p>
+    </header>
+
+    <main>
+        <section class="upload-section">
+            <h2>Audio Classification</h2>
+            <div class="upload-container">
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <div class="file-input-wrapper">
+                        <input type="file" id="audioFile" name="file" accept="audio/*" required>
+                        <label for="audioFile" class="file-label">
+                            <span>Choose Audio File</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn-primary">Classify Audio</button>
+                </form>
+            </div>
+            
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p>Analyzing audio...</p>
+            </div>
+            
+            <div id="results" class="hidden">
+                <h3>Classification Results</h3>
+                <div id="predictions"></div>
+                <audio id="audioPlayer" controls></audio>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <h2>Noise Pollution Map</h2>
+            <div id="map"></div>
+            <div class="map-controls">
+                <button onclick="loadNoiseData()" class="btn-secondary">Refresh Data</button>
+                <button onclick="centerMap()" class="btn-secondary">Center Map</button>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <h2>About This System</h2>
+            <p>This system uses machine learning to classify urban sounds including:</p>
+            <ul>
+                <li>Emergency vehicles (sirens)</li>
+                <li>Construction activities</li>
+                <li>Traffic noise</li>
+                <li>Street music</li>
+                <li>And more...</li>
+            </ul>
+            <p>Upload your audio recordings to get instant classification results and contribute to our noise pollution mapping efforts.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Urban Soundscape Classifier. Built with TensorFlow and Flask.</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
