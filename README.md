@@ -35,13 +35,13 @@
 - 💻 **Web Interface**: Clean, responsive Flask web application
 - 📍 **Noise Hotspot Detection**: Identify areas with high noise pollution
 
-## Installation
+## 📥 Installation
 
-### Prerequisites
+### 📋 Prerequisites
 - Python 3.8+
 - pip package manager
 
-### Setup
+### 🔧 Setup
 
 1. Clone the repository:
 ```bash
@@ -65,9 +65,9 @@ pip install -r requirements.txt
 mkdir -p models data/training static/uploads
 ```
 
-## Usage
+## 🚀 Usage
 
-### Training the Model
+### 🎓 Training the Model
 
 1. Prepare your dataset in the following structure:
 ```
@@ -89,7 +89,7 @@ data/training/
 python ml_pipeline/train.py
 ```
 
-### Running the Application
+### 🌐 Running the Application
 
 1. Start the Flask server:
 ```bash
@@ -100,7 +100,7 @@ python app.py
 - Main application: http://localhost:5000
 - Noise map: http://localhost:5000/map
 
-### API Endpoints
+### 🔌 API Endpoints
 
 - `GET /` - Main application interface
 - `POST /upload` - Upload and classify audio
@@ -108,22 +108,22 @@ python app.py
 - `GET /api/noise-data` - Get noise pollution data
 - `GET /health` - Health check
 
-## Audio Classification Categories
+## 🔊 Audio Classification Categories
 
 The system can classify the following urban sounds:
 
-1. **Air Conditioner** - HVAC system sounds
-2. **Car Horn** - Vehicle horn sounds
-3. **Children Playing** - Sounds of children at play
-4. **Dog Bark** - Canine vocalizations
-5. **Drilling** - Construction drilling sounds
-6. **Engine Idling** - Vehicle engine sounds
-7. **Gun Shot** - Firearm discharge sounds
-8. **Jackhammer** - Pneumatic tool sounds
-9. **Siren** - Emergency vehicle sirens
-10. **Street Music** - Live musical performances
+1. 🌡️ **Air Conditioner** - HVAC system sounds
+2. 📯 **Car Horn** - Vehicle horn sounds
+3. 🧒 **Children Playing** - Sounds of children at play
+4. 🐕 **Dog Bark** - Canine vocalizations
+5. 🔨 **Drilling** - Construction drilling sounds
+6. 🚗 **Engine Idling** - Vehicle engine sounds
+7. 💥 **Gun Shot** - Firearm discharge sounds
+8. ⚒️ **Jackhammer** - Pneumatic tool sounds
+9. 🚨 **Siren** - Emergency vehicle sirens
+10. 🎸 **Street Music** - Live musical performances
 
-## File Structure
+## 📁 File Structure
 
 ```
 urban-sound-classifier/
@@ -148,7 +148,7 @@ urban-sound-classifier/
 └── tests/             # Test files
 ```
 
-## Configuration
+## ⚙️ Configuration
 
 Edit `config.py` to customize:
 
@@ -157,7 +157,7 @@ Edit `config.py` to customize:
 - Map configuration
 - Upload limits
 
-## Contributing
+## 🤝 Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -165,11 +165,11 @@ Edit `config.py` to customize:
 4. Add tests
 5. Submit a pull request
 
-## License
+## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Acknowledgments
+## 🙏 Acknowledgments
 
 - UrbanSound8K dataset for training data
 - TensorFlow team for the ML framework
